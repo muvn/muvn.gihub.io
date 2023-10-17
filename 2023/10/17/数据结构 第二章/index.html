@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>数据结构 第二章 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="123456789101112# 10&#96;&#96;&#96;cvoid Reverse(int R[], int from, int to)&amp;#123;    int i,temp;    for(i&#x3D;0; i&lt;(to - from+1)&#x2F;2;i++)    &amp;#123;        temp&#x3D;R[from+i];        R[from+i]&#x3D;R[to-i];        R[to-i]&#x3D;temp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构 第二章">
+<meta property="og:url" content="http://muvn.github.io/2023/10/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20%E7%AC%AC%E4%BA%8C%E7%AB%A0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="123456789101112# 10&#96;&#96;&#96;cvoid Reverse(int R[], int from, int to)&amp;#123;    int i,temp;    for(i&#x3D;0; i&lt;(to - from+1)&#x2F;2;i++)    &amp;#123;        temp&#x3D;R[from+i];        R[from+i]&#x3D;R[to-i];        R[to-i]&#x3D;temp">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-10-17T03:33:44.229Z">
+<meta property="article:modified_time" content="2023-10-17T11:50:31.916Z">
+<meta property="article:author" content="muvn">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Muvn</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://muvn.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-数据结构 第二章" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/10/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="article-date">
+  <time class="dt-published" datetime="2023-10-17T03:33:44.229Z" itemprop="datePublished">2023-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      数据结构 第二章
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 10</span><br><span class="line"></span><br><span class="line">```c</span><br><span class="line">void Reverse(int R[], int from, int to)&#123;</span><br><span class="line">    int i,temp;</span><br><span class="line">    for(i=0; i&lt;(to - from+1)/2;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        temp=R[from+i];</span><br><span class="line">        R[from+i]=R[to-i];</span><br><span class="line">        R[to-i]=temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;//Reverse</span><br></pre></td></tr></table></figure>
+
+<p>该函数实现的是数组逆序算法,将对应位置的元素互换.</p>
+<h1 id="11"><a href="#11" class="headerlink" title="11"></a>11</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="GPT-Q-A"><a href="#GPT-Q-A" class="headerlink" title="GPT   Q &amp; A"></a>GPT   Q &amp; A</h1><h2 id="为什么-GetElem-传入的是一级指针-而-ListInsert-需要传入二级指针？"><a href="#为什么-GetElem-传入的是一级指针-而-ListInsert-需要传入二级指针？" class="headerlink" title="为什么  GetElem()  传入的是一级指针,而 ListInsert() 需要传入二级指针？"></a>为什么  <code>GetElem()</code>  传入的是一级指针,而 <code>ListInsert</code>() 需要传入二级指针？</h2><p>这是因为在 <code>GetElem</code> 函数中，我们需要访问链表的节点，而使用一级指针的方式是可以访问链表的节点的，因为通过一级指针可以访问链表的每一个节点。因此，在 <code>GetElem</code> 函数中使用一级指针即可。</p>
+<p>而在 <code>ListInsert</code> 函数中，我们需要修改链表的头节点，而使用一级指针不能直接修改链表的头节点，因为修改一级指针的值只能改变指针指向的对象，无法改变指针本身。因此，为了能够在 <code>ListInsert</code> 函数中修改链表的头节点，我们需要使用二级指针，它可以指向链表头结点指针的指针，通过修改二级指针可以更改链表头结点的指向。所以，在 <code>ListInsert</code> 函数中我们需要传入一个指向链表头结点指针的指针，即二级指针。</p>
+<h3 id="ListInsert-函数中修改链表的头节点-是吗？"><a href="#ListInsert-函数中修改链表的头节点-是吗？" class="headerlink" title="ListInsert 函数中修改链表的头节点? 是吗？"></a><code>ListInsert</code> 函数中修改链表的头节点? 是吗？</h3><p>抱歉，我的回答有误。在 <code>ListInsert</code> 函数中，并没有修改链表的头结点。正确的解释应该是：</p>
+<p>在 <code>ListInsert</code> 函数中，第一个参数 <code>LinkList *L</code> 是一个指向链表头结点指针的指针，即二级指针。这是因为需要在 <code>ListInsert</code> 函数中插入新的节点，并将其放在指定的位置上。而链表节点的存储是通过一个个链表节点的指针连接起来的，如果要在链表中插入新的节点，需要找到相应位置的节点，然后修改链表中节点的指针域。</p>
+<p>为了找到相应位置的节点，需要访问链表中的节点。使用一级指针是可以访问链表的每一个节点的，但是插入节点需要修改节点的指针域，而这个修改操作会影响链表的头结点指针。因此需要使用一个指向链表头结点指针的指针，即二级指针，以便在插入节点时能够修改链表的头结点指针，以及在查找要插入位置的节点时能够访问链表中的节点。</p>
+<p>因此，在 <code>ListInsert</code> 函数中使用二级指针作为参数，是因为需要访问链表中的每一个节点，并且在插入新的节点时需要修改链表头结点的指针，而二级指针刚好可以满足这些要求。</p>
+<h3 id="插入节点需要修改节点的指针域，而这个修改操作会影响链表的头结点指针？-是吗？具体是怎样影响？"><a href="#插入节点需要修改节点的指针域，而这个修改操作会影响链表的头结点指针？-是吗？具体是怎样影响？" class="headerlink" title="插入节点需要修改节点的指针域，而这个修改操作会影响链表的头结点指针？ 是吗？具体是怎样影响？"></a>插入节点需要修改节点的指针域，而这个修改操作会影响链表的头结点指针？ 是吗？具体是怎样影响？</h3><p>抱歉我的回答还是有些错误。</p>
+<p>插入节点的操作只会影响链表中插入节点的前后节点的指针域，并不会影响链表的头结点指针。因此，<code>ListInsert</code> 函数并没有直接修改链表的头结点指针。</p>
+<p>但是，<code>ListInsert</code> 函数中传递链表头结点指针的指针是为了使得函数能够修改链表中任何节点的指针域，从而实现对链表的操作。另外，在访问链表中的节点时，需要使用指针，二级指针可以保证能够访问链表中的每个节点。</p>
+<p>总之，一级指针可以访问链表中的每一个节点，但不能修改链表头结点指针；而二级指针即可以访问链表中每一个节点，也能修改链表头结点指针，因此在进行链表节点操作时需要使用二级指针。</p>
+<h3 id="插入时传入的是二级指针对吧？"><a href="#插入时传入的是二级指针对吧？" class="headerlink" title="插入时传入的是二级指针对吧？"></a>插入时传入的是二级指针对吧？</h3><p>不完全正确。在这段代码中，<code>ListInsert</code>函数传入的参数是链表的指针和要插入的位置<code>i</code>。但是在函数内部，由于需要修改链表的结构，因此需要对链表的指针使用二级指针。</p>
+<p>具体而言， <code>p = GetElem(L, i-1)</code> 语句获取的是待插入位置的前一个节点，用于将新节点的指针域插入到链表中。**<code>L</code>是链表的头节点指针，因此如果使用一级指针，将无法修改链表的指针域**。因此，在<code>GetElem</code>函数的实现中，使用的是一级指针；而在<code>ListInsert</code>函数的实现中，由于需要修改链表的结构，因此需要使用二级指针。</p>
+<p>在实际的代码中，<code>ListInsert</code>函数中的第一行代码应该是<code>LNode **p = &amp;L;</code>，这样就定义了一个指向链表头节点指针的指针，用于修改链表头节点指针的值。而<code>p = GetElem(L, i-1)</code>语句中<code>p</code>是一个指向链表节点的指针的指针，用于更新待插入位置的前驱节点的指针域。</p>
+<h3 id="L是链表的头节点指针，因此如果使用一级指针，将无法修改链表的指针域-我不明白，解释一下"><a href="#L是链表的头节点指针，因此如果使用一级指针，将无法修改链表的指针域-我不明白，解释一下" class="headerlink" title="L是链表的头节点指针，因此如果使用一级指针，将无法修改链表的指针域,我不明白，解释一下"></a><code>L</code>是链表的头节点指针，因此如果使用一级指针，将无法修改链表的指针域,我不明白，解释一下</h3><p>当我们定义一个链表时，通常会定义头节点，而头节点并不存储元素的值，只是用来标识链表的起始位置，保持链表的完整性。而链表的第一个元素实际上存储在头节点的下一个节点中。因此，对于头节点来说，我们通常需要使用指针来指向它的下一个节点。</p>
+<p><strong>当我们需要在链表中插入节点时，如果使用一级指针来操作链表，那么我们只能访问链表中的每一个节点，并更新对应节点的指针域</strong>。但是实际上，在链表的头部插入节点时，我们需要更新链表头节点的指针域，因此我们必须使用指向链表头节点指针的指针（即二级指针）来修改链表头节点的指针域。具体而言，<strong>我们需要将指向新节点的指针赋值给指向链表头节点指针的指针，这样才能让链表的头节点指向新节点。</strong></p>
+<p>因此，在对链表进行插入、删除等操作时，往往需要使用二级指针。这样可以更灵活地对链表进行操作，同时保证链表的完整性。</p>
+<h3 id="可以理解为-只对链表中间结点操作时不必使用二级指针吗？"><a href="#可以理解为-只对链表中间结点操作时不必使用二级指针吗？" class="headerlink" title="可以理解为 只对链表中间结点操作时不必使用二级指针吗？"></a>可以理解为 只对链表中间结点操作时不必使用二级指针吗？</h3><p>是的，当我们对链表中间的节点进行操作时，可以使用一级指针来访问和修改链表中间的节点。因为在这种情况下，我们只需要访问和修改当前节点的指针域即可，不需要改变当前节点作为前驱节点和后继节点的指针域。<strong>只有在需要修改链表头节点的指针域或者在链表的头部插入节点时，才需要使用二级指针</strong>。</p>
+<p>需要注意的是，在链表的中间进行插入或删除操作时，要保证插入或删除节点之前的节点的next指针正确指向该节点。因此，在这种情况下，我们需要对链表中间节点的指针域进行相应的修改，以维护链表的完整性。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://muvn.github.io/2023/10/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20%E7%AC%AC%E4%BA%8C%E7%AB%A0/" data-id="clnu9jbky0001elndf2f16y81" data-title="数据结构 第二章" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/10/17/%E4%BD%A0%E5%A5%BD/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          你好
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/10/17/%E4%BD%A0%E5%A5%BD/">你好</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20%E7%AC%AC%E4%BA%8C%E7%AB%A0/">数据结构 第二章</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 muvn<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
